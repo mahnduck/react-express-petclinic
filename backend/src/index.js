@@ -1,6 +1,9 @@
 const express = require('express')
-const app = express()
+const cors = require('cors')
 const PORT = process.env.PORT || 8080;
+
+const app = express()
+app.use(cors())
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
@@ -8,5 +11,5 @@ app.get('/', function (req, res) {
 
 //Launch listening server on port 8081
 app.listen(PORT, function () {
-    console.log("listenting on " + PORT);
+    console.log("listening on " + PORT);
 })

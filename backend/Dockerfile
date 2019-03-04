@@ -1,5 +1,7 @@
 FROM node:11.10.1-alpine
 
+RUN apk add --no-cache bash grep
+
 WORKDIR /var/www/petclinic/backend
 
 COPY package*.json ./

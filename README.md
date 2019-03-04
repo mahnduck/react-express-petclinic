@@ -1,4 +1,4 @@
-# react-express-petclinic
+# PetClinic Demo
 
 Demo application, built with a react frontend and a node+express backend.
 
@@ -10,3 +10,6 @@ Demo application, built with a react frontend and a node+express backend.
 docker-compose build
 docker-compose up
 ```
+
+The frontend/UI can be accessed at [http://127.0.0.1:3001]() .
+The backend is accessible on port `8081`.
