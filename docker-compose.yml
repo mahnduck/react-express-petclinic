@@ -1,0 +1,25 @@
+version: '2'
+services:
+  backend:
+    build:
+      context: ./backend/
+    command: /var/www/petclinic/backend/node_modules/.bin/nodemon src/index.js
+    volumes:
+      - ./backend/:/var/www/petclinic/backend
+      - /var/www/petclinic/backend/node_modules
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  frontend:
+    build:
+      context: ./frontend/
+    command: npm start
+    volumes:
+      - ./frontend/:/var/www/petclinic/frontend
+      - /var/www/petclinic/frontend/node_modules
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
