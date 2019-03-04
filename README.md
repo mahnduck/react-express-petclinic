@@ -1,6 +1,6 @@
 # PetClinic Demo
 
-Demo application, built with a react frontend and a node+express backend.
+Demo application, built with a React frontend and a Node+Express backend.
 
 ## Requirements
 - Docker + Docker Compose
