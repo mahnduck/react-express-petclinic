@@ -23,13 +23,13 @@ function Visits() {
 class App extends Component {
     render() {
         return (
-            <>
-            <Nav/>
-            <Route path="/" exact component={Index} />
-            <Route path="/pets/" component={Pets} />
-            <Route path="/vets/" component={Vets} />
-            <Route path="/visits/" component={Visits} />
-            </>
+            <div className="content">
+                <Nav/>
+                <Route path="/" exact component={Index} />
+                <Route path="/pets/" component={Pets} />
+                <Route path="/vets/" component={Vets} />
+                <Route path="/visits/" component={Visits} />
+            </div>
         );
     }
 }

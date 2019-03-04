@@ -9,7 +9,6 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 })
 
-//Launch listening server on port 8081
 app.listen(PORT, function () {
-    console.log("listening on " + PORT);
+    console.log("Listening on " + PORT);
 })
