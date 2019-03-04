@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS petclinic;
+
 USE petclinic;
 
 CREATE TABLE IF NOT EXISTS vet (
@@ -23,7 +25,7 @@ CREATE TABLE IF NOT EXISTS animal_type (
 CREATE TABLE IF NOT EXISTS pet (
     id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NULL,
     animal_type_id INT,
     owner_id INT,
     FOREIGN KEY (animal_type_id) REFERENCES animal_type(id),
